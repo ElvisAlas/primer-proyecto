@@ -1,0 +1,55 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+body {background: #000}
+#menu {list-style-type:none;margin:0;padding:0;position: absolute;}
+#menu > li {display:inline-block;float: left;margin-right: 1px;}
+/*Estilo para los links*/
+#menu li a {display:block;min-width:140px;height: 35px;text-align: center;line-height: 35px;font-family:Helvetica, Arial, sans-serif;color: #fff;text-decoration: none;}
+#menu li:hover a {background: #72d9fb;}
+#menu li:hover ul a {background: #e1e1e1;color: #222;height: 35px;line-height: 35px;}
+
+/*Hover para enlaces desplegados*/
+#menu li:hover ul a:hover {background: #2598c3;color: #fff;}
+
+/*Ocultar enlaces desplegables hasta que se necesiten*/
+li ul {display: none;}
+
+/*Hacer vínculos desplegables verticales*/
+#menu li ul li {display: block;float: none;}
+#menu li ul li a {width: auto;min-width: 100px;padding: 0 19px;}
+
+/*Visualizar el menú desplegable en hover*/
+#menu a:hover + .hidden, .hidden:hover {display: block;}
+
+/*Estilos boton desplegar menu*/
+.show-menu {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;font-weight:bold;text-decoration: none;color: #fff;background: #2598c3;text-align: center;padding: 7px 0;display: none;}
+input[type=checkbox]{display: none;}
+/*Mostrar menú cuando se marca la casilla de verificación invisible*/
+input[type=checkbox]:checked ~ #menu{display: block;}
+
+/*Estilo responsivo ancho menor de 750px*/
+
+@media screen and (max-width : 750px){
+/*Hacer que los vínculos desplegables aparezcan en línea*/
+#menu {position: static;display: none;}
+/*Crear espacio vertical*/
+#menu > li {margin-bottom: 1px;}
+/*Todos los enlaces del menú de ancho completo*/
+#menu li, #menu a {width: 100%;}
+.show-menu {display:block;cursor:pointer;}
+}
+.footer-social-icons {width: 100%;}
+.social-icons {margin: 0px;float: right;}
+.social-icons li {display: inline;}
+.fa {padding:10px 14px;-o-transition:.5s;-ms-transition:.5s;-moz-transition:.5s;-webkit-transition:.5s;transition:.5s;color:#fff}
+.fa-facebook:hover {background-color: #3d5b99;}
+.fa-twitter:hover {background-color: #00aced;}
+.fa-rss:hover {background-color: #eb8231;}
+.fa-youtube:hover {background-color: #e64a41;}
+.fa-linkedin:hover {background-color: #0073a4;}
+.fa-google-plus:hover {background-color: #e25714;}
+@media screen and (max-width : 1020px){
+.social-icons {float: ;margin-top: 40px;}
+}
+@media screen and (max-width : 750px){
+.social-icons {float: none;margin-top: 5px;}
+}
